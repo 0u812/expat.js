@@ -14,9 +14,9 @@ module.exports = function(grunt) {
     },
 
     toolchain: grunt.option('toolchain'),
-    buildpath: grunt.option('build-path'),
-    installpath: grunt.option('install-path'),
-    sourceroot: grunt.option('source-root'),
+    buildpath: grunt.option('build-path') || './build',
+    installpath: grunt.option('install-path') || './install',
+    sourceroot: path.resolve('.'),
   });
 
   grunt.registerTask('default', ['shell']);
