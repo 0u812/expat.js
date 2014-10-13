@@ -5,11 +5,11 @@ module.exports = function(grunt) {
     shell: {
       options: {
         execOptions: {
-          cwd: '<%=buildpath%>'
+          cwd: '<%= buildpath %>'
         }
       },
       target: {
-          command: 'emconfigure cmake -DCMAKE_TOOLCHAIN_FILE=<%=toolchain%> -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=<%=installpath%> <%=sourceroot%> && make -j8 && make install'
+          command: 'emconfigure cmake -DCMAKE_TOOLCHAIN_FILE=<%= toolchain %> -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=<%= installpath %> <%= sourceroot %> && make -j8 && make install'
       }
     }
   });
